@@ -1,0 +1,111 @@
+class Vehiculo
+{
+	marca: string;
+	modelo: string;
+	color: string;
+	ruedas: number;
+	reportes: Array<Accidente>;
+	propietario: Persona;
+	
+	constructor (marca:string,modelo:string,color:string,ruedas:number,propietario:Persona){
+  this.marca=marca;
+  this.modelo=modelo;
+  this.color=color;
+  this.ruedas=ruedas;
+ this.propietario= propietario
+	// Implemented operations
+	
+}
+   totalVehiculos() {
+   
+	}
+     
+}
+
+class Accidente{
+ fecha:string;
+ descripcion:string;
+ severidad: string;
+ involucrados: Array<Vehiculo>;
+
+ constructor (fecha:string,descripcion:string,severidad:string){
+  this.fecha=fecha;
+  this.descripcion=descripcion;
+  this.severidad=severidad;
+ }
+ ContarAccidentes() {
+    }
+ }
+ 
+class Persona{
+ nombre:string;
+ cedula:number;
+ telefono: number;
+ edad:number;
+ Licencia: LicenciaConduccion;
+	vehiculos: Array<Vehiculo>;
+
+ constructor (nombre:string, cedula:number,telefono: number,edad:number){
+  this.nombre=nombre;
+  this.cedula=cedula;
+  this.telefono=telefono;
+  this.edad=edad;
+ }
+ 
+}
+class LicenciaConduccion
+{
+
+	tipoLicencia: string;
+	fechaExpedicion: string;
+	vigencia: string;
+	propietario: Persona;
+	
+	RevisarExistencia() {
+	
+	}
+	
+constructor (tipolicencia:string, fechaExpedicion:string,vigencia: string,propietario:Persona){
+  this.tipoLicencia=tipolicencia;
+  this.fechaExpedicion=fechaExpedicion;
+  this.vigencia=vigencia;
+  this.propietario=propietario
+}
+}
+
+class Motorizado extends Vehiculo
+{
+    
+	 placa: string;
+	 velocidadMaxima: number;
+	
+}
+
+class Motocicleta extends Motorizado
+{
+    // Attributes
+	Cilindrajes: number;
+	
+    // Implemented attributes
+	
+    // Operations
+	 
+	// Implemented operations
+	
+}
+
+class Bicicleta extends Vehiculo
+{
+    
+	tipo: "urbana"| "deportiva";
+	luces: boolean;
+	
+
+	
+}
+class Carro extends Motorizado
+{
+	asientos: number;
+	
+	
+}
